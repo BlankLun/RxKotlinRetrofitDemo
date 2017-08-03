@@ -39,8 +39,13 @@ class MainActivity : BaseActivity() {
     private fun requestNetwork() {
 
         val progressSubscriber = object : ProgressSubscriber<UserInfoVo>(this@MainActivity, "登录中...") {
+
             override fun _onNext(retData: UserInfoVo?) {
                 Toast.makeText(this@MainActivity, "登录成功!!!", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun _onError(errorCode: Int, msg: String) {
+                Toast.makeText(this@MainActivity, msg, Toast.LENGTH_SHORT).show()
             }
         }
         HttpUtil.instance.userLogin("lisi", "123456", this, progressSubscriber)

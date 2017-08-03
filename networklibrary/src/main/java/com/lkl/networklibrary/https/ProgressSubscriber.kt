@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.lkl.demo.R
+import com.lkl.networklibrary.R
 
 /**
  * Created    likunlun

@@ -1,14 +1,11 @@
 package com.lkl.demo.https
 
 import android.util.Log
-import android.widget.Toast
-import com.lkl.demo.MyApplication
 import com.lkl.demo.https.consts.HttpStatus
 import com.lkl.demo.https.exception.ApiException
 import com.lkl.demo.https.exception.NullDataException
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
-
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
@@ -64,7 +61,5 @@ abstract class HttpSimpleSubscriber<T> : Observer<T> {
 
     }
 
-    open fun _onError(errorCode: Int, msg: String) {
-        Toast.makeText(MyApplication.context, msg, Toast.LENGTH_SHORT).show()
-    }
+    abstract fun _onError(errorCode: Int, msg: String)
 }
