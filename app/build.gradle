@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        applicationId "com.lkl.demo"
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
+
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+
+        multiDexEnabled true//防止方法数超过65535
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g" //此处可根据电脑本身配置 数值越大 当然越快
+        preDexLibraries = false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    compile "com.android.support:appcompat-v7:$support_version"
+
+    compile 'com.android.support:multidex:1.0.1'//防止方法数超过65535
+
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    compile 'com.trello.rxlifecycle2:rxlifecycle-kotlin:2.1.0'
+
+    // -------------------- 网络请求 retrofit+okhttp+gson ---------------------------
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    // -------------------- 网络请求 retrofit+okhttp+gson ---------------------------
+}
