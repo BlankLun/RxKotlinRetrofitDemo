@@ -1,10 +1,10 @@
-package com.lkl.demo.https
+package com.lkl.networklibrary.https
 
 import android.util.Log
-import com.lkl.demo.bean.ResultData
-import com.lkl.demo.https.consts.HttpStatus
-import com.lkl.demo.https.exception.ApiException
-import com.lkl.demo.https.exception.NullDataException
+import com.lkl.networklibrary.bean.ResultData
+import com.lkl.networklibrary.https.consts.HttpStatus
+import com.lkl.networklibrary.https.exception.ApiException
+import com.lkl.networklibrary.https.exception.NullDataException
 import com.trello.rxlifecycle2.LifecycleProvider
 import com.trello.rxlifecycle2.android.ActivityEvent
 import com.trello.rxlifecycle2.android.FragmentEvent

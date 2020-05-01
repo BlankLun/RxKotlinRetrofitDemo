@@ -1,7 +1,7 @@
-package com.lkl.demo.https
+package com.lkl.networklibrary.https
 
 import android.util.Log
-import com.lkl.demo.https.consts.UriConsts
+import com.lkl.networklibrary.https.consts.UriConsts
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

@@ -1,4 +1,4 @@
-package com.lkl.demo.https.consts
+package com.lkl.networklibrary.https.consts
 
 /**
  * Created    likunlun

@@ -1,4 +1,4 @@
-package com.lkl.demo.https.util
+package com.lkl.networklibrary.https.util
 
 import android.util.Log
 import java.io.UnsupportedEncodingException

@@ -1,8 +1,8 @@
-package com.lkl.demo.https.util
+package com.lkl.networklibrary.https.util
 
-import com.lkl.demo.bean.ResultData
-import com.lkl.demo.https.HttpSimpleSubscriber
-import com.lkl.demo.https.HttpSimpleTransformer
+import com.lkl.networklibrary.bean.ResultData
+import com.lkl.networklibrary.https.HttpSimpleSubscriber
+import com.lkl.networklibrary.https.HttpSimpleTransformer
 import com.trello.rxlifecycle2.LifecycleProvider
 import io.reactivex.Observable
 

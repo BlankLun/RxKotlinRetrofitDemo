@@ -40,19 +40,19 @@ android {
 }
 
 dependencies {
-    compile project(':networklibrary')
+    implementation project(':networklibrary')
 
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    compile "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:appcompat-v7:$support_version"
 
-    compile 'com.android.support:multidex:1.0.1'//防止方法数超过65535
+    implementation 'com.android.support:multidex:1.0.1'//防止方法数超过65535
 
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
 }

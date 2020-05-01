@@ -24,22 +24,22 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    compile "com.android.support:appcompat-v7:$support_version"
+    api "com.android.support:appcompat-v7:$support_version"
 
-    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
-    compile 'com.trello.rxlifecycle2:rxlifecycle-kotlin:2.1.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle-kotlin:2.1.0'
 
     // -------------------- 网络请求 retrofit+okhttp+gson ---------------------------
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    api 'com.squareup.retrofit2:retrofit:2.2.0'
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     // -------------------- 网络请求 retrofit+okhttp+gson ---------------------------
 }

@@ -1,7 +1,7 @@
-package com.lkl.demo.https
+package com.lkl.networklibrary.https
 
-import com.lkl.demo.bean.ResultData
-import com.lkl.demo.bean.UserInfoVo
+import com.lkl.networklibrary.bean.ResultData
+import com.lkl.networklibrary.bean.UserInfoVo
 import io.reactivex.Observable
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded

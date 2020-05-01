@@ -1,8 +1,8 @@
-package com.lkl.demo.https
+package com.lkl.networklibrary.https
 
-import com.lkl.demo.bean.UserInfoVo
-import com.lkl.demo.https.util.MD5Util
-import com.lkl.demo.https.util.compose1
+import com.lkl.networklibrary.bean.UserInfoVo
+import com.lkl.networklibrary.https.util.MD5Util
+import com.lkl.networklibrary.https.util.compose1
 import com.trello.rxlifecycle2.LifecycleProvider
 import io.reactivex.Observable
 

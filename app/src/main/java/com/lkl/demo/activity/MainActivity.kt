@@ -5,9 +5,9 @@ import android.widget.Button
 import android.widget.Toast
 import com.lkl.demo.R
 import com.lkl.demo.base.BaseActivity
-import com.lkl.demo.bean.UserInfoVo
-import com.lkl.demo.https.HttpUtil
-import com.lkl.demo.https.ProgressSubscriber
+import com.lkl.networklibrary.bean.UserInfoVo
+import com.lkl.networklibrary.https.HttpUtil
+import com.lkl.networklibrary.https.ProgressSubscriber
 
 class MainActivity : BaseActivity() {
 
@@ -22,7 +22,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initView() {
-        btn = findViewById(R.id.btn1) as Button
+        btn = findViewById<Button>(R.id.btn1)
     }
 
     override fun initEvent(savedInstanceState: Bundle?) {

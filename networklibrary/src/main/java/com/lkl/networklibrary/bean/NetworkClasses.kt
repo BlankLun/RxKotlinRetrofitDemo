@@ -1,4 +1,4 @@
-package com.lkl.demo.bean
+package com.lkl.networklibrary.bean
 
 /**
  * Created    likunlun

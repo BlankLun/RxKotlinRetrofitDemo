@@ -1,6 +1,6 @@
-package com.lkl.demo.https.exception
+package com.lkl.networklibrary.https.exception
 
-import com.lkl.demo.https.consts.HttpStatus
+import com.lkl.networklibrary.https.consts.HttpStatus
 
 /**
  * Created    likunlun
